@@ -3,61 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>你的姓名 | 個人空間</title>
+    <meta name="description" content="一個充滿自然色彩與手繪氣息的溫暖個人網站。">
+    <meta name="theme-color" content="#f9f6ed">
+    <title>你的姓名 | My Little World</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a class="skip-link" href="#about">跳至主要內容</a>
 
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">PORTFOLIO</a>
+    <nav class="navbar" aria-label="主要導覽">
+        <div class="container nav-inner">
+            <a href="#top" class="logo" aria-label="My Little World，回到首頁">
+                <svg class="logo-leaf" width="34" height="36" viewBox="0 0 34 36" aria-hidden="true">
+                    <path d="M17 29C4 26 3 14 9 7c5-5 13-3 16-6 4 16-2 26-8 28Z" fill="#7e9c72"/>
+                    <path d="M15 33c2-11 6-18 12-23" fill="none" stroke="#3e654a" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M17 25c-1-6-4-9-8-10m10 5c3-4 6-5 8-6" fill="none" stroke="#3e654a" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span>my little <em>world.</em></span>
+            </a>
             <ul class="nav-links">
+                <li><a href="#top">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <a class="nav-hello" href="#contact">Say hello <span aria-hidden="true">↗</span></a>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="container">
-            <h1 class="hero-name">你好，我是 <span class="highlight">你的姓名</span></h1>
-            <p class="hero-tagline">專注於 [領域] 的開發者，熱衷於將複雜問題轉化為簡潔、有溫度的數位體驗。</p>
-            <div class="hero-btns">
-                <a href="#work" class="btn btn-primary">View Work</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
-            </div>
-        </div>
-    </header>
+    <main id="top">
+        <header class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="eyebrow-sun" aria-hidden="true">✳</span> A SMALL PLACE FOR BIG DREAMS</p>
+                    <p class="hero-kicker">Welcome to my little world.</p>
+                    <h1 class="hero-name">你好，我是<br><span class="highlight">你的姓名<span class="name-sparkle" aria-hidden="true">✻</span></span></h1>
+                    <p class="hero-tagline">專注於 [領域] 的開發者，熱衷於將複雜問題轉化為簡潔、有溫度的數位體驗。</p>
+                    <div class="hero-btns">
+                        <a href="#about" class="btn btn-primary">走進我的世界 <span aria-hidden="true">↗</span></a>
+                        <a href="#contact" class="btn btn-secondary">與我聯絡 <span aria-hidden="true">✉</span></a>
+                    </div>
+                    <p class="hero-note"><span aria-hidden="true">✿</span> 把每一天，都過成值得收藏的故事。</p>
+                </div>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p>
-                    這裡填入你的自我介紹。你可以提到你的專業背景，以及你提到的特質：珍惜長期陪伴的工具、對環境的感情，以及你如何將這份細膩觀察融入到你的作品中。
-                </p>
-                <p>
-                    目前我專注於探索 [技術 A] 與 [技術 B] 的結合，致力於打造高效且易用的產品。
-                </p>
+                <div class="hero-art" aria-label="手繪風格的藍天、草丘、樹木與紅屋頂小屋">
+                    <span class="art-star art-star-one" aria-hidden="true">✦</span>
+                    <span class="art-star art-star-two" aria-hidden="true">✧</span>
+                    <span class="art-sticker" aria-hidden="true">a lovely day</span>
+                    <svg class="landscape" viewBox="0 0 720 600" role="img" aria-labelledby="landscape-title landscape-desc" xmlns="http://www.w3.org/2000/svg">
+                        <title id="landscape-title">山坡上的小屋</title>
+                        <desc id="landscape-desc">原創田園插畫：天空有陽光和白雲，遠山環繞著一間暖色小屋，綠樹和野花在風中搖曳。</desc>
+                        <defs>
+                            <linearGradient id="sky" x1="0" y1="0" x2="0.15" y2="1">
+                                <stop offset="0" stop-color="#a7d5dd"/>
+                                <stop offset=".57" stop-color="#d2e8d9"/>
+                                <stop offset="1" stop-color="#f9e7ba"/>
+                            </linearGradient>
+                            <radialGradient id="sunGlow">
+                                <stop offset="0" stop-color="#fff8cc" stop-opacity=".95"/>
+                                <stop offset=".43" stop-color="#ffe8a7" stop-opacity=".52"/>
+                                <stop offset="1" stop-color="#fff2c4" stop-opacity="0"/>
+                            </radialGradient>
+                            <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="#a8c99c"/>
+                                <stop offset="1" stop-color="#6e9d75"/>
+                            </linearGradient>
+                            <linearGradient id="field" x1="0" y1="0" x2=".5" y2="1">
+                                <stop offset="0" stop-color="#8fb378"/>
+                                <stop offset="1" stop-color="#659267"/>
+                            </linearGradient>
+                            <linearGradient id="roof" x1="0" y1="0" x2=".25" y2="1">
+                                <stop offset="0" stop-color="#bd7563"/>
+                                <stop offset="1" stop-color="#91554d"/>
+                            </linearGradient>
+                            <clipPath id="scene-mask">
+                                <path d="M131 57C236 14 466 15 576 67c77 37 107 105 102 184-4 78 10 142-30 208-46 77-177 109-319 105C184 561 75 526 55 441 36 361 48 289 50 222 54 143 76 82 131 57Z"/>
+                            </clipPath>
+                        </defs>
+                        <path d="M131 57C236 14 466 15 576 67c77 37 107 105 102 184-4 78 10 142-30 208-46 77-177 109-319 105C184 561 75 526 55 441 36 361 48 289 50 222 54 143 76 82 131 57Z" fill="#f1e9d1" stroke="#eee4cc" stroke-width="9"/>
+                        <g clip-path="url(#scene-mask)">
+                            <path d="M0 0H720V600H0Z" fill="url(#sky)"/>
+                            <ellipse cx="517" cy="139" rx="140" ry="132" fill="url(#sunGlow)"/>
+                            <circle cx="519" cy="139" r="39" fill="#fff2c1" opacity=".91"/>
+                            <g fill="#fffdf0" opacity=".86">
+                                <path d="M92 161c17-16 36-11 49-4 11-22 45-23 59 0 22-9 47 2 48 19-20 11-135 12-156-15Z"/>
+                                <path d="M432 105c12-12 28-10 36-4 12-19 41-16 48 3 16-4 27 3 35 14-19 7-109 7-119-13Z" opacity=".8"/>
+                                <path d="M566 216c12-11 26-7 34-3 9-13 28-11 33 3 16-4 28 2 30 12-21 5-81 6-97-12Z" opacity=".7"/>
+                            </g>
+                            <path d="M0 369C96 303 153 307 215 340c72-77 145-97 224-36 62-74 147-71 281 2v294H0Z" fill="#abc5a2" opacity=".83"/>
+                            <path d="M0 402c76-78 168-83 243-30 75-55 169-52 240-10 78-64 162-56 237 3v235H0Z" fill="url(#hill)"/>
+                            <path d="M0 442c105-38 194-25 302-1 101-48 259-56 418-4v163H0Z" fill="url(#field)"/>
+                            <path d="M0 485c105-12 191-9 289 11 117-42 253-48 431-19v123H0Z" fill="#789e6c" opacity=".55"/>
+                            <path d="M403 441c0 0 21 34 8 69-8 27-20 45-24 90h91c-24-69-28-111-38-159Z" fill="#e4c79a" opacity=".84"/>
+                            <path d="M405 443c18 17 37 18 50 0" fill="none" stroke="#c9ae84" stroke-width="3" opacity=".7"/>
+                            <!-- distant trees -->
+                            <g opacity=".82">
+                                <path d="M120 405v-60" stroke="#6e7151" stroke-width="9" stroke-linecap="round"/>
+                                <ellipse cx="120" cy="343" rx="38" ry="50" fill="#618f68"/>
+                                <ellipse cx="100" cy="346" rx="27" ry="34" fill="#739d71"/>
+                                <ellipse cx="143" cy="346" rx="25" ry="38" fill="#7da875"/>
+                                <path d="M627 420v-75" stroke="#697653" stroke-width="10" stroke-linecap="round"/>
+                                <ellipse cx="621" cy="339" rx="47" ry="57" fill="#678f67"/>
+                                <ellipse cx="592" cy="345" rx="31" ry="39" fill="#80a579"/>
+                                <ellipse cx="645" cy="340" rx="32" ry="44" fill="#779e74"/>
+                            </g>
+                            <!-- cottage chimney, walls and roof -->
+                            <path d="M459 282v-55h28v79" fill="#e8cba9" stroke="#8f6751" stroke-width="5" stroke-linejoin="round"/>
+                            <path d="M454 227h39" stroke="#935a4b" stroke-width="9" stroke-linecap="round"/>
+                            <path d="M306 334h204v122H306Z" fill="#efe0bb" stroke="#986f55" stroke-width="4"/>
+                            <path d="M285 343 408 244 530 343l-21 7-101-81-100 81Z" fill="url(#roof)" stroke="#85564b" stroke-width="5" stroke-linejoin="round"/>
+                            <path d="m306 336 101-85 101 85" fill="none" stroke="#d3977f" stroke-width="5" opacity=".65"/>
+                            <path d="M318 374h43v44h-43Z" fill="#c3d6bf" stroke="#8f7459" stroke-width="5"/>
+                            <path d="M339 376v41m-20-21h42" stroke="#f4e9ce" stroke-width="5"/>
+                            <path d="M457 374h38v44h-38Z" fill="#c1d4c0" stroke="#8f7459" stroke-width="5"/>
+                            <path d="M476 376v41m-18-21h37" stroke="#f4e9ce" stroke-width="5"/>
+                            <path d="M390 400c0-11 9-20 20-20s20 9 20 20v56h-40Z" fill="#64847a" stroke="#7f6c57" stroke-width="5"/>
+                            <circle cx="420" cy="425" r="3.5" fill="#f2d895"/>
+                            <path d="M302 456h213" stroke="#7e906a" stroke-width="7" stroke-linecap="round"/>
+                            <path d="M298 352h-12m236 0h12" stroke="#eedbbf" stroke-width="4" stroke-linecap="round"/>
+                            <!-- foreground shrubs -->
+                            <g>
+                                <ellipse cx="267" cy="445" rx="53" ry="29" fill="#668f63"/>
+                                <ellipse cx="290" cy="454" rx="43" ry="23" fill="#7da66f"/>
+                                <ellipse cx="532" cy="448" rx="35" ry="23" fill="#638a62"/>
+                                <ellipse cx="551" cy="455" rx="33" ry="19" fill="#83a875"/>
+                            </g>
+                            <!-- fence -->
+                            <g fill="none" stroke="#f1dfb8" stroke-width="6" stroke-linecap="round" opacity=".92">
+                                <path d="M166 468v-42m34 48v-41m34 44v-41m-76 0 82 5m-82 15 82 5"/>
+                                <path d="M560 477v-42m31 46v-40m31 40v-45m-69 6 77 3m-77 15 77 3"/>
+                            </g>
+                            <!-- grasses -->
+                            <g fill="none" stroke="#517c55" stroke-width="3" stroke-linecap="round" opacity=".78">
+                                <path d="M118 493l-8-14m8 14 8-18m-8 18 1-23M191 514l-12-17m12 17 9-16M247 526l-7-13m7 13 10-18M549 521l-9-19m9 19 8-19m76 5-8-18m8 18 9-15M348 532l-11-12m11 12 9-19"/>
+                            </g>
+                            <!-- little flowers -->
+                            <g stroke="#f7edca" stroke-width="2" stroke-linecap="round">
+                                <g transform="translate(154 484)"><path d="M0 0v20" stroke="#517c55"/><circle cx="-6" cy="-2" r="6" fill="#f9edd6"/><circle cx="6" cy="-2" r="6" fill="#f9edd6"/><circle cy="-8" r="6" fill="#f9edd6"/><circle cy="4" r="6" fill="#f9edd6"/><circle r="4" fill="#e3b56a" stroke="none"/></g>
+                                <g transform="translate(275 519) scale(.8)"><path d="M0 0v20" stroke="#517c55"/><circle cx="-6" cy="-2" r="6" fill="#f3d8c4"/><circle cx="6" cy="-2" r="6" fill="#f3d8c4"/><circle cy="-8" r="6" fill="#f3d8c4"/><circle cy="4" r="6" fill="#f3d8c4"/><circle r="4" fill="#e9b25a" stroke="none"/></g>
+                                <g transform="translate(585 508)"><path d="M0 0v20" stroke="#517c55"/><circle cx="-6" cy="-2" r="6" fill="#f8eac5"/><circle cx="6" cy="-2" r="6" fill="#f8eac5"/><circle cy="-8" r="6" fill="#f8eac5"/><circle cy="4" r="6" fill="#f8eac5"/><circle r="4" fill="#e9b25a" stroke="none"/></g>
+                                <g transform="translate(495 517) scale(.65)"><path d="M0 0v20" stroke="#517c55"/><circle cx="-6" cy="-2" r="6" fill="#f6d4c6"/><circle cx="6" cy="-2" r="6" fill="#f6d4c6"/><circle cy="-8" r="6" fill="#f6d4c6"/><circle cy="4" r="6" fill="#f6d4c6"/><circle r="4" fill="#e9b25a" stroke="none"/></g>
+                                <g transform="translate(99 505) scale(.7)"><path d="M0 0v20" stroke="#517c55"/><circle cx="-6" cy="-2" r="6" fill="#f9edd6"/><circle cx="6" cy="-2" r="6" fill="#f9edd6"/><circle cy="-8" r="6" fill="#f9edd6"/><circle cy="4" r="6" fill="#f9edd6"/><circle r="4" fill="#e3b56a" stroke="none"/></g>
+                            </g>
+                            <g fill="#e8e6c4" opacity=".8">
+                                <circle cx="215" cy="465" r="3"/><circle cx="569" cy="492" r="2.6"/><circle cx="340" cy="496" r="2.7"/><circle cx="127" cy="516" r="2.8"/><circle cx="470" cy="490" r="2.2"/>
+                            </g>
+                            <!-- birds -->
+                            <g fill="none" stroke="#526a62" stroke-width="2.8" stroke-linecap="round" opacity=".75">
+                                <path d="m283 185 12 6 13-6m23-17 10 5 10-5"/>
+                            </g>
+                        </g>
+                        <path d="M131 57C236 14 466 15 576 67c77 37 107 105 102 184-4 78 10 142-30 208-46 77-177 109-319 105C184 561 75 526 55 441 36 361 48 289 50 222 54 143 76 82 131 57Z" fill="none" stroke="#f9f2de" stroke-width="5" opacity=".7"/>
+                    </svg>
+                    <p class="art-caption">somewhere, under the blue sky <span aria-hidden="true">✿</span></p>
+                </div>
             </div>
-        </div>
-    </section>
+            <div class="hero-bottom" aria-hidden="true"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>↓</span></div>
+        </header>
 
-    <section id="contact" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <p class="contact-text">歡迎透過以下管道與我聯繫，一起聊聊有趣的合作機會！</p>
-            <div class="contact-links">
-                <a href="mailto:your-email@example.com" class="contact-item">Email</a>
-                <a href="https://github.com/your-username" target="_blank" class="contact-item">GitHub</a>
-                <a href="https://linkedin.com/in/your-profile" target="_blank" class="contact-item">LinkedIn</a>
-            </div>
+        <div class="story-ribbon" aria-hidden="true">
+            <span>✺</span><span>COLLECTING LITTLE MOMENTS</span><span>✿</span><span>MAKING THINGS WITH HEART</span><span>✺</span>
         </div>
-    </section>
+
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-kicker"><span>01</span> A LITTLE ABOUT ME</p>
+                    <h2 class="section-title">關於我 <em>About Me</em></h2>
+                    <p class="section-subtitle">在每段平凡的日常裡，慢慢發現自己的模樣。</p>
+                </div>
+                <div class="about-layout">
+                    <div class="postcard-wrap reveal" aria-hidden="true">
+                        <div class="postcard">
+                            <div class="postcard-visual">
+                                <svg viewBox="0 0 390 330" class="desk-illustration" xmlns="http://www.w3.org/2000/svg">
+                                    <defs><linearGradient id="deskbg" x2="0" y2="1"><stop stop-color="#e4ebd9"/><stop offset="1" stop-color="#e8d8b6"/></linearGradient></defs>
+                                    <rect width="390" height="330" rx="16" fill="url(#deskbg)"/>
+                                    <circle cx="315" cy="68" r="54" fill="#f3e9bb" opacity=".7"/>
+                                    <path d="M30 245c62-20 140-18 189 5 62-26 113-31 171-6v86H0v-81Z" fill="#a3b98e"/>
+                                    <path d="M50 250h285" stroke="#8e6f53" stroke-width="8" stroke-linecap="round"/>
+                                    <path d="M73 248v-118h83v118Z" fill="#a77d60"/><path d="M83 248V144h63v104" fill="#dec5a2"/><path d="M84 168h62m-62 29h62" stroke="#a77d60" stroke-width="5"/>
+                                    <path d="M160 250V108h50v142Z" fill="#879c8a" stroke="#658075" stroke-width="4"/>
+                                    <path d="M215 250V132h36v118Z" fill="#c18a70" stroke="#a87361" stroke-width="4"/>
+                                    <path d="M261 249v-85h29v85Z" fill="#b9ad76" stroke="#958958" stroke-width="4"/>
+                                    <path d="M173 124h25m-25 8h25m-25 83h25m25-61h18m-18 8h18" stroke="#f4e9ca" stroke-width="3" stroke-linecap="round"/>
+                                    <ellipse cx="296" cy="251" rx="49" ry="10" fill="#8eaa82" opacity=".7"/>
+                                    <path d="M275 207c1 32 8 46 25 46 19 0 27-18 28-46Z" fill="#efe9da" stroke="#96745e" stroke-width="4"/>
+                                    <path d="M326 215c31-2 30 29 3 28" stroke="#96745e" stroke-width="6" fill="none"/>
+                                    <path d="M287 185c-16-19 11-25-2-41m20 42c-10-12 9-20-1-34" fill="none" stroke="#fffaf0" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+                                    <path d="M35 249c0-39 15-58 42-72m-16 62c-14-18-17-39-13-61m29 54c21-9 31-26 33-45" fill="none" stroke="#618666" stroke-width="5" stroke-linecap="round"/>
+                                    <g fill="#7e9c71"><ellipse cx="67" cy="189" rx="15" ry="26" transform="rotate(-30 67 189)"/><ellipse cx="43" cy="204" rx="12" ry="23" transform="rotate(-42 43 204)"/><ellipse cx="92" cy="201" rx="12" ry="23" transform="rotate(40 92 201)"/></g>
+                                    <g fill="#f4e8c8"><circle cx="108" cy="83" r="7"/><circle cx="119" cy="83" r="7"/><circle cx="113" cy="73" r="7"/><circle cx="113" cy="92" r="7"/></g><circle cx="113" cy="83" r="5" fill="#d7aa68"/>
+                                    <path d="M114 90c1 27-4 46-21 58" fill="none" stroke="#6f9a72" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <div class="postcard-foot"><span>ordinary days, lovely things.</span><span>✳ 001</span></div>
+                        </div>
+                        <span class="postcard-tape"></span>
+                        <span class="postcard-doodle">✽</span>
+                    </div>
+                    <div class="about-content reveal">
+                        <p class="mini-heading">DEAR VISITOR,</p>
+                        <h3>在自己的步調裡，<br><em>慢慢長成喜歡的樣子。</em></h3>
+                        <p>這裡可以填入你的自我介紹，分享你的專業背景、喜歡的事物，以及你想透過作品傳達的想法。</p>
+                        <p>目前我專注於探索 <strong>[技術 A]</strong> 與 <strong>[技術 B]</strong> 的結合，致力於打造高效且易用、也帶有一點溫度的產品。</p>
+                        <div class="about-signoff"><span aria-hidden="true">✿</span><span>Stay curious, stay kind.</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="contact-panel reveal">
+                    <div class="contact-copy">
+                        <p class="section-kicker"><span>02</span> LET'S KEEP IN TOUCH</p>
+                        <h2 class="contact-title">有空的話，<br><em>來聊聊天吧！</em></h2>
+                        <p class="contact-text">歡迎透過以下管道與我聯繫，一起聊聊有趣的想法與合作機會。每一封訊息，都是新故事的開始。</p>
+                        <div class="contact-links">
+                            <a href="mailto:your-email@example.com" class="contact-item">Email <span aria-hidden="true">↗</span></a>
+                            <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" class="contact-item">GitHub <span aria-hidden="true">↗</span></a>
+                            <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" class="contact-item">LinkedIn <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </div>
+                    <div class="contact-decoration" aria-hidden="true">
+                        <svg viewBox="0 0 325 310" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="160" cy="147" r="126" fill="#dfe7d1"/>
+                            <path d="M69 224c46-21 115-18 179 5" stroke="#94b087" stroke-width="16" stroke-linecap="round" fill="none"/>
+                            <path d="M87 126c0-16 12-28 28-28h106c16 0 28 12 28 28v90H87Z" fill="#f9f2df" stroke="#68806b" stroke-width="5" stroke-linejoin="round"/>
+                            <path d="m89 121 79 62 79-62" fill="none" stroke="#68806b" stroke-width="5" stroke-linejoin="round"/>
+                            <path d="m89 218 62-51m95 51-62-51" fill="none" stroke="#d1c9aa" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M161 141c-7-17-33-12-33 7 0 13 17 24 33 36 16-12 33-23 33-36 0-19-26-24-33-7Z" fill="#cf8e7e"/>
+                            <g stroke="#557d5d" stroke-width="4" stroke-linecap="round" fill="none"><path d="M61 243c-10-32-19-57-39-66m52 64c0-35-3-56 13-78m170 80c13-37 28-56 44-64m-56 64c4-32-5-58-17-71"/></g>
+                            <g fill="#87a77a"><ellipse cx="34" cy="183" rx="13" ry="25" transform="rotate(-40 34 183)"/><ellipse cx="77" cy="185" rx="12" ry="25" transform="rotate(33 77 185)"/><ellipse cx="284" cy="185" rx="12" ry="25" transform="rotate(35 284 185)"/><ellipse cx="241" cy="192" rx="12" ry="24" transform="rotate(-38 241 192)"/></g>
+                            <g fill="#faf2d5"><circle cx="36" cy="141" r="7"/><circle cx="49" cy="141" r="7"/><circle cx="43" cy="130" r="7"/><circle cx="43" cy="151" r="7"/></g><circle cx="43" cy="141" r="5" fill="#d5ab70"/>
+                            <g fill="#f4e3c8"><circle cx="292" cy="138" r="8"/><circle cx="306" cy="138" r="8"/><circle cx="299" cy="128" r="8"/><circle cx="299" cy="148" r="8"/></g><circle cx="299" cy="138" r="5" fill="#d5ab70"/>
+                            <path d="m174 31 4-11m-26 20-8-9m43 15 11-7" stroke="#d5ab70" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                        <span class="contact-doodle">with love, always.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 你的姓名. All Rights Reserved.</p>
+        <div class="container footer-inner">
+            <span>✿ <em>Made with heart & a little magic.</em></span>
+            <span>&copy; <span id="year">2026</span> 你的姓名 · All Rights Reserved.</span>
         </div>
     </footer>
 
