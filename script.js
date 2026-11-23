@@ -1,20 +1,28 @@
-// 等待 DOM 載入完成
 document.addEventListener('DOMContentLoaded', () => {
-    
     const navbar = document.querySelector('.navbar');
+    const year = document.getElementById('year');
 
-    // 監聽滾動事件
-    window.addEventListener('scroll', () => {
-        // 如果滾動超過 50px，導覽列加入陰影與背景加深
-        if (window.scrollY > 50) {
-            navbar.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.3)';
-            navbar.style.background = '#0b0e14';
-        } else {
-            navbar.style.boxShadow = 'none';
-            navbar.style.background = 'rgba(11, 14, 20, 0.95)';
-        }
-    });
+    if (year) year.textContent = new Date().getFullYear();
 
-    // 簡單的點擊回饋效果 (未來可擴充)
-    console.log("Welcome to my digital space!");
+    // 滾動時為導覽列加上非常輕的陰影，保留清新的紙張色調。
+    const updateNavbar = () => {
+        navbar?.classList.toggle('is-scrolled', window.scrollY > 20);
+    };
+    updateNavbar();
+    window.addEventListener('scroll', updateNavbar, { passive: true });
+
+    // 預設內容直接可見；支援 IntersectionObserver 時才加上漸入效果。
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduceMotion && 'IntersectionObserver' in window) {
+        const targets = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries, currentObserver) => {
+            for (const entry of entries) {
+                if (!entry.isIntersecting) continue;
+                entry.target.classList.add('is-visible');
+                currentObserver.unobserve(entry.target);
+            }
+        }, { threshold: 0.08, rootMargin: '0px 0px -18px 0px' });
+        for (const target of targets) observer.observe(target);
+        document.documentElement.classList.add('js-ready');
+    }
 });
